@@ -1,0 +1,845 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    min-height: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?jtjpc3');
+    src:url('fonts/icomoon.eot?#iefixjtjpc3') format('embedded-opentype'),
+        url('fonts/icomoon.woff?jtjpc3') format('woff'),
+        url('fonts/icomoon.ttf?jtjpc3') format('truetype'),
+        url('fonts/icomoon.svg?jtjpc3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ellipsis-vertical:before {
+    content: "\e600";
+}
+.icon-close:before {
+    content: "\e601";
+}
+
+@font-face {
+    font-family: 'beta54regular';
+    src: url('fonts/beta54-webfont.eot');
+    src: url('fonts/beta54-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/beta54-webfont.woff') format('woff'),
+         url('fonts/beta54-webfont.ttf') format('truetype'),
+         url('fonts/beta54-webfont.svg#beta54regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_slab500';
+    src: url('fonts/museo_slab_500-webfont.eot');
+    src: url('fonts/museo_slab_500-webfont?#iefix') format('embedded-opentype'),
+         url('fonts/museo_slab_500-webfont.woff') format('woff'),
+         url('fonts/museo_slab_500-webfont.ttf') format('truetype'),
+         url('fonts/museo_slab_500-webfont.svg#museo_slab500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('fonts/leaguegothic-regular-webfont.eot');
+    src: url('fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #111;
+    min-height: 100%;
+}
+
+#index {
+    background: #fff;
+}
+
+header {
+    background: #fff;
+    margin: 0 auto;
+}
+
+#headercontent {
+    /*max-width: 1185px;*/
+    max-width: 1245px;
+    min-height: 99px;
+    /*height: 84px;*/
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#logo {
+    padding: 5px 0px 0px 20px;
+    font-size: 56px;
+    font-family: 'beta54regular';
+    color: #111;
+    float: left;
+}
+
+#about {
+    display: none;  /* ensures it’s invisible until it’s called */
+    position: fixed;  /* makes the div go into a position that’s absolute to the browser viewing area */
+    top: 0%;
+    right: 0%;
+    background-color: #111;
+    -moz-opacity: 0.95; /* makes the div transparent, so you have a cool overlay effect */
+    opacity: .95;
+    filter: alpha(opacity=95);
+    width: 100%;
+    height: 100%;
+    z-index: 90; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
+}
+
+#infolinks a:link {
+    color: #111;
+    text-decoration: none;
+}
+
+#infolinks a:hover {
+    text-decoration: underline;
+}
+
+#infolinks a:visited {
+    color: #111;
+}
+
+#infolinks {
+    float: left;
+    padding: 20px 10px 0px 20px;
+    /*right: 30px;
+    top: 25px;*/
+    font-size: .875em;
+    line-height: .875em;
+    font-family: 'museo_slab500';
+}
+
+#aboutclose {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 90%;
+}
+
+#aboutcloseicon {
+    position: absolute;
+    float: right;
+    top: 29px;
+    right: 0px;
+    font-size: 1em;
+    color: #fff;
+}
+
+#abouttext {
+    color: #fff;
+    font-family: 'museo_slab500';
+    font-size: 1em;
+    line-height: 1em;
+    /*width: 900px;*/
+    width: 73%;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    margin: 4em auto auto auto;
+}
+
+#container-shell {
+    max-width: 1185px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#container {
+    /*max-width: 1185px;
+    width: 100%;*/
+    width: 285px    ;
+    margin: 0 auto;
+}
+
+.item {
+    margin-bottom: 9px;
+    visibility: hidden;
+}
+
+.grid-sizer {
+    width: 135px;
+}
+
+.grid-gutter {
+    width: 9px;
+}
+
+#least-content {
+    max-width: 640px;
+    overflow: auto;
+    margin: 5px auto;
+}
+
+#see {
+    margin: 0 auto;
+    position: relative;
+}
+
+.caption {
+    text-align: right;
+    position: absolute;
+    color: #fff;
+    opacity: 0.8;
+    max-width: 640px;
+    bottom: 0;
+    right: 5px;
+    padding: 5px;
+    display: block;
+    font-family: 'museo_slab500';
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #111;
+}
+
+.caption-black {
+    text-align: right;
+    position: absolute;
+    color: #111;
+    opacity: 0.8;
+    max-width: 640px;
+    bottom: 0;
+    right: 5px;
+    padding: 5px;
+    display: block;
+    font-family: 'museo_slab500';
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #fff;
+}
+
+#listenread {
+    margin: 3px auto 0px auto;
+    font-size: 1em;
+    font-family: 'museo_slab500';
+}
+
+#listen {
+    float: left;
+    max-width: 640px;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    border-right: 3px solid #111;
+    border-bottom: 3px solid #111;
+    background: #ddd;
+}
+
+#listen p {
+    margin: 0 !important;
+}
+
+.jp-type-single, .jp-gui, .jp-interface {
+    display: inline-block;
+}
+
+.jp-controls {
+    margin: 20px 10px 18px 10px;
+}
+
+.jp-type-single a {
+    display: inline-block;
+}
+
+#read {
+    max-width: 640px;
+    width: 100%;
+    padding: 0 0 .7em 0;
+    background: #fff;
+}
+
+#read p {
+    line-height: 1.4em;
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#read p.heading {
+    text-align: center;
+}
+
+#read p a:link {
+    color: #2980b9;
+    text-decoration: none;
+    border-bottom: 1px dotted #2980b9;
+}
+
+#read p a:hover {
+    border-bottom: 1px solid #2980b9;
+}
+
+#read p a:visited {
+    /* OLDCOLOR color: #27ae60;*/
+    color: #2980b9;
+}
+
+#read p.br {
+    display: none;
+}
+
+.thecategory {
+    font-size: 1.75em;
+    color: #111;
+    font-weight: bold;
+    word-wrap: break-word;
+    padding-top: 5px;
+}
+
+.category {
+    display: none;
+}
+
+.category-container {
+    padding: 0px 0px 0px 10px;
+}
+
+.artist {
+    font-family: 'league_gothicregular';
+    font-size: 3.5em;
+    line-height: 1em !important;
+    margin: 0;
+    padding: 0 0 0 10px !important;
+}
+
+.song {
+    font-size: 1.75em;
+    display: block;
+    line-height: 1em !important;
+    margin: 0;
+    padding: 0 0 0 10px !important;
+}
+
+.home {
+    visibility: hidden;
+    color: #fff;
+    width:40px;
+    height:40px;
+    display:block;
+    cursor:pointer;
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+#least .least-preview .close {
+    background-size: 15px 15px;
+    background-image:url('../img/close.svg');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+    cursor:pointer;
+    position:absolute;
+    top:100px;
+    right:0px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media screen and (min-width: 641px) {
+    #least-content {
+        max-width: 900px;
+        overflow: auto;
+        margin: 20px auto;
+    }
+    
+    .caption {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out; 
+        transition: all 300ms ease-out;
+        opacity: 0;
+        width: 900px;
+        max-width: 900px;
+        font-size: 1.75em;
+        text-shadow: 2px 2px #111;
+    }
+
+    .caption-black {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out; 
+        transition: all 300ms ease-out;
+        opacity: 0;
+        width: 900px;
+        max-width: 900px;
+        font-size: 1.75em;
+        text-shadow: 2px 2px #fff;
+    }
+
+
+    #see:hover .caption{
+        opacity: 1;
+    }
+
+    #see:hover .caption-black{
+        opacity: 1;
+    }
+
+    #listen {
+        float: left;
+        width: 400px;
+        padding: 5px 10px 5px 5px;
+        margin-right: 10px;
+        border-right: 3px solid #111;
+        border-bottom: 3px solid #111;
+        background: #ddd;
+    }
+
+    .item {
+        margin-bottom: 15px;
+        visibility: hidden;
+    }
+
+    .grid-sizer {
+        width: 225px;
+    }
+
+    .grid-gutter {
+        width: 15px;
+    }
+
+    #read {
+        max-width: 900px;
+        width: 900px;
+        padding: 0 0 .7em 0;
+        background: #fff;
+    }
+
+    #read p.br {
+        display: inline;
+        line-height: 1em;
+    }
+
+    .category {
+        display: inline;
+        font-size: 1.75em;
+        color: #ddd;
+        word-wrap: break-word;
+    /*    word-break: break-all;*/
+        line-height: 1em;
+    }
+
+    .thecategory {
+        padding-top: 0px;
+        line-height: 1em;
+    }
+
+    .category-container {
+        padding: 5px 0px 0px 0px;
+    }
+
+    .home {
+        visibility: visible;
+        color: #fff;
+        width:40px;
+        height:40px;
+        display:block;
+        cursor:pointer;
+        position:absolute;
+        top:10px;
+        right:10px
+    }
+
+    #least a.grid:after {
+        display: none;
+    }
+
+    #least a.grid:hover:after {
+        display: block;
+        content: attr(data-artist);
+        padding: 70px 5px 0px 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        letter-spacing: 1px;
+        color: #fff;
+        text-shadow: 1px 1px 1px #666;
+        font-family: 'league_gothicregular';
+        font-size: 2em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #abouttext {
+        color: #fff;
+        font-family: 'museo_slab500';
+        font-size: 3em;
+        line-height: 1em;
+        /*width: 900px;*/
+        width: 73%;
+        text-align: left;
+        text-rendering: optimizeLegibility;
+        margin: 3em auto auto auto;
+    }
+
+    #aboutcloseicon {
+        position: absolute;
+        float: right;
+        top: 29px;
+        right: 0px;
+        font-size: 3.5em;
+        color: #fff;
+    }
+
+    #infolinks {
+        float: right;
+        padding: 25px 30px 0px 30px;
+        /*right: 30px;
+        top: 25px;*/
+        font-size: .875em;
+        line-height: .875em;
+        font-family: 'museo_slab500';
+    }
+    #logo {
+        padding: 15px 0px 0px 30px;
+        font-size: 56px;
+        font-family: 'beta54regular';
+        color: #111;
+        float: left;
+    }
+
+    #least .least-preview .close {
+        background-size: 100%;
+        background-position: 0% 0%;
+        right: 10px;
+    }
+}
+
+/*
+@media screen and (max-width: 480px){
+    #grid[data-columns]::before {
+        content: '1 .column.size-1of1';
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #grid[data-columns]::before {
+        content: '2 .column.size-1of2';
+    }
+}
+@media screen and (min-width: 769px) {
+    #grid[data-columns]::before {
+        content: '3 .column.size-1of3';
+    }
+}
+*/
+
+/*
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+/*}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+/*}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

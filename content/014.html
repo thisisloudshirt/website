@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>loud shirt</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/jquery.jplayer.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#jquery_jplayer_1').jPlayer({
+                    ready: function () {
+                        $(this).jPlayer("setMedia", {
+                            mp3: $("#jquery_jplayer_1").attr("title")
+                        });
+                    },
+                    swfPath: "../js",
+                    supplied: "mp3"    
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <a href="http://thisisloudshirt.com"><img class="home" src="../img/home.svg"></a>
+        <div id="least-content">
+        <div id="see"><a class="main" href="http://www.amysherald.com/" target="_blank"><img class="main" src="../img/full/014.jpg" width="100%"><span class="caption">amy sherald</span></a></div>
+        <div id="listenread">
+            <div id="read">
+                <div id="listen">
+                    <p class="artist">FRANKIE COSMOS</p>
+                    <p class="song">&ldquo;Owen&rdquo;</p>
+                    <div id="jquery_jplayer_1" class="jp-jplayer" title="http://api.soundcloud.com/tracks/123919648/stream?client_id=f6a6e08e5072be777ade6ebd9a0c5217"></div>
+                    <div id="jp_container_1" class="jp-audio">
+                        <div class="jp-type-single">
+                            <div class="jp-gui jp-interface">
+                                <div class="jp-controls">
+                                    <a href="javascript:;" class="jp-play" tabindex="1"><img src="../img/player/play.png" width="32" height="32"></a>
+                                    <a href="javascript:;" class="jp-pause" tabindex="1"><img src="../img/player/pause.png" width="32" height="32"></a>
+                                    <a href="javascript:;" class="jp-stop" tabindex="1"><img src="../img/player/stop.png" width="32" height="32"></a>
+                                </div>
+                            </div>
+                            <div class="jp-no-solution">
+                                <span>Update Required</span>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                            <a href="https://soundcloud.com/double-double-whammy/owen" target="_blank"><img src="../img/player/soundcloud.png" width="104" height="32"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-container"><span class="thecategory">&amp;</span><span class="category">NONFICTIONTWEETSREVIEW QUOTESSAYPOETRYLYRICS</span><span class="thecategory">ETC.</span></div>
+                <p>From <a href="http://sequentialcrush.blogspot.com/2014/02/page-peterson-on-where-to-meet-boys.html" target="_blank"><em>Secret Hearts</em> #152</a>:</p>
+                <br><br>
+                <p class="heading">WHERE TO MEET BOYS<br>By Page Peterson</p>
+                <p>So you want to meet boys, make new friends, and enjoy yourself?</p>
+                <p>GET ACTIVE: Open your eyes and take a fresh look at your neighborhood. Pretend this is the first time you&rsquo;ve seen it&mdash;you&rsquo;re a reporter and you have to gather material for an article on what the young people in your town are all about.</p>
+                <p>Enter in your valuable little notebook the times and places of all the happenings that interest you.</p>
+                <p>When does the football team practice? When does the youth group of the local drama, social or political club get together? When is the church picnic?</p>
+                <p>Even better, make yourself an &ldquo;insider&rdquo; and help organize some of these events. Do they need volunteers to decorate the hall for the dance? Or to pick up leaves in the park, or paint the walls of the clubhouse? You can meet more people and have more fun preparing for an event than on the day itself.</p>
+                <p>NOW: Get to talking to the boys you see all around you.</p>
+                <p>SOON: You&rsquo;ll find you&rsquo;ve got involved in a pleasant social whirl that begins to take care of itself.</p>
+                <p>People enjoy having you around. Your phone is busy. You&rsquo;re in demand. You have become a more interesting person.</p>
+            </div>
+        </div>
+        </div>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-48097534-1', 'thisisloudshirt.com');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>

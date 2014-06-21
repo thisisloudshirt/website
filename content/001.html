@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>loud shirt</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="http://thisisloudshirt.com/img/thumbs/001.jpg"/>
+        <meta property="og:description" content="lady lamb the beekeeper"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/jquery.jplayer.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#jquery_jplayer_1').jPlayer({
+                    ready: function () {
+                        $(this).jPlayer("setMedia", {
+                            mp3: $("#jquery_jplayer_1").attr("title")
+                        });
+                    },
+                    swfPath: "../js",
+                    supplied: "mp3"    
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <a href="http://thisisloudshirt.com"><img class="home" src="../img/home.svg"></a>
+        <div id="least-content">
+        <div id="see"><a class="main" href="#"><img class="main" src="../img/full/001.jpg" width="100%"><span class="caption">author unknown</span></a></div>
+        <div id="listenread">
+            <div id="read">
+                <div id="listen">
+                    <p class="artist">LADY LAMB THE BEEKEEPER</p>
+                    <p class="song">&ldquo;Bird Balloons&rdquo;</p>
+                    <div id="jquery_jplayer_1" class="jp-jplayer" title="http://api.soundcloud.com/tracks/75502442/stream?client_id=f6a6e08e5072be777ade6ebd9a0c5217"></div>
+                    <div id="jp_container_1" class="jp-audio">
+                        <div class="jp-type-single">
+                            <div class="jp-gui jp-interface">
+                                <div class="jp-controls">
+                                    <a href="javascript:;" class="jp-play" tabindex="1"><img src="../img/player/play.png" width="32" height="32"></a>
+                                    <a href="javascript:;" class="jp-pause" tabindex="1"><img src="../img/player/pause.png" width="32" height="32"></a>
+                                    <a href="javascript:;" class="jp-stop" tabindex="1"><img src="../img/player/stop.png" width="32" height="32"></a>
+                                </div>
+                            </div>
+                            <div class="jp-no-solution">
+                                <span>Update Required</span>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                            <a href="https://soundcloud.com/badabingrecords/birdballoons" target="_blank"><img src="../img/player/soundcloud.png" width="104" height="32"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-container"><span class="thecategory">&amp;</span><span class="category">NONFICTIONTWEETSREVIEW QUOTESSAYPOETRY</span><span class="thecategory">LYRICS</span><span class="category">ETC.</span></div>
+                <p>I&rsquo;m a ghost and you all know it / I&rsquo;m singing songs and I ain&rsquo;t slowing / It was a fragile thing and I goddamn dropped it / I picked the pieces up and put them in my pocket / ... / And now your love is writing words on the wall with the meat of a nectarine / That she picked earlier that morning in the orchard / And you are on the street, a chest of drawers, free / While the skeleton parade marches past you / Carrying bird balloons, they fly backwards and forwards / ... / I&rsquo;m a ghost and you all know it / I&rsquo;m singing songs and I ain&rsquo;t stopping / My hair grew long so I fucking cut it / And when you looked away / I snuck those trimmings in your locket / Ha, ha, ha, ha, ha, ha</p>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--<script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+    </body>
+</html>
